@@ -1,0 +1,17 @@
+class Solution {
+    int MissingNumber(int array[], int n) {
+        // Your Code Here
+         int sum=0;
+         int j=0; 
+         int arrSum=0;
+      for(int i=1;i<=n;i++){
+          sum=sum+i;
+          if(j<n-1){
+          arrSum=arrSum+array[j];
+          j++;
+          }
+      }
+      int diff=sum-arrSum;
+     return diff;
+    }
+}
